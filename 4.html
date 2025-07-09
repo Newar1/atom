@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter 1: Some Basic Concepts of Chemistry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #111;
+      color: #fff;
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 1.2em;
+      line-height: 1.7;
+      padding: 20px;
+    }
+    section {
+      min-height: 100vh;
+      padding: 40px 20px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #fff;
+    }
+    ul, ol {
+      margin: 20px auto;
+      max-width: 800px;
+      list-style: square;
+    }
+    li {
+      margin-bottom: 12px;
+    }
+    .note {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+    img {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+      border: 2px solid #fff;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+
+    img.animated-image {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto;
+  display: block;
+  opacity: 0;
+  transform: scale(0.9) rotate(-2deg);
+  transition: all 1s ease-in-out;
+}
+
+/* When visible */
+img.animated-image.visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Hover effect (optional) */
+img.animated-image:hover {
+  transform: scale(1.03) rotate(1deg);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Some Basic Concepts of Chemistry</h2>
+    <div class="note">
+      <h3>Importance of Chemistry</h3>
+      <ul>
+        <li><strong>In Agriculture and Food:</strong>
+          <ul>
+            <li>Fertilizers: urea, calcium phosphate, sodium nitrate</li>
+            <li>Insecticides, fungicides, pesticides</li>
+            <li>Food preservation (jam, butter, squashes)</li>
+          </ul>
+        </li>
+        <li><strong>In Health and Sanitation:</strong>
+          <ul>
+            <li>Sulpha drugs, penicillin, cisplatin, taxol, AZT</li>
+            <li>Disinfectants: phenol</li>
+            <li>Chlorine (0.2–0.4 ppm) for water sterilization</li>
+          </ul>
+        </li>
+        <li><strong>Saving the Environment:</strong>
+          <ul>
+            <li>Reducing pollution: CNG as petrol substitute</li>
+          </ul>
+        </li>
+        <li><strong>Application in Industry:</strong>
+          <ul>
+            <li>Fertilizers, dyes, detergents, alloys, polymers</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Matter</h3>
+      <p>Anything that has mass and occupies space.</p>
+
+      <h3>Classification of Matter</h3>
+      <ul>
+        <li><strong>Physical Classification:</strong>
+          <ul>
+            <li>Solids: Definite shape and volume</li>
+            <li>Liquids: Definite volume, no definite shape</li>
+            <li>Gases: No definite shape or volume</li>
+          </ul>
+        </li>
+        <li><strong>Chemical Classification:</strong>
+          <ul>
+            <li>Pure Substances
+              <ul>
+                <li>Elements: metals, non-metals, semi-metals</li>
+                <li>Compounds: inorganic, organic</li>
+              </ul>
+            </li>
+            <li>Mixtures
+              <ul>
+                <li>Homogeneous: uniform composition</li>
+                <li>Heterogeneous: visible boundaries</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <img src="images/am.png" alt="Classification of Matter" class="animated-image" />
+      
+
+      <h3>Differences between Compounds and Mixtures</h3>
+      <ol>
+        <li>Compounds: chemically combined; Mixtures: physically combined</li>
+        <li>Fixed ratio in compounds; variable in mixtures</li>
+        <li>Compounds: homogeneous; Mixtures: homogeneous or heterogeneous</li>
+        <li>Compounds: not separated by physical methods; mixtures can</li>
+        <li>Compounds lose identities; mixtures retain identities</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+  <h2>• Properties of Matter and Units of Measurement</h2>
+  <div class="note">
+    <ul>
+      <li><strong>Physical Properties:</strong> Can be measured without changing the identity of the substance.  
+        Examples: colour, odour, melting point, boiling point.
+      </li>
+      <li><strong>Chemical Properties:</strong> Require a chemical change.  
+        Examples: acidity, basicity, combustibility.
+      </li>
+      <li><strong>Fundamental Units:</strong> Basic measurable quantities like mass, length, time.
+      </li>
+      <li><strong>SI System:</strong> Most widely used system. It includes 7 base quantities:
+        <ul>
+          <li>Length (metre - m)</li>
+          <li>Mass (kilogram - kg)</li>
+          <li>Time (second - s)</li>
+          <li>Temperature (kelvin - K)</li>
+          <li>Amount of substance (mole - mol)</li>
+          <li>Electric current (ampere - A)</li>
+          <li>Luminous intensity (candela - cd)</li>
+        </ul>
+      </li>
+    </ul>
+    <p>✔️ Tip: Learn the 7 SI units and physical vs chemical properties clearly.</p>
+  </div>
+</section>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('section').forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+          sec.classList.add('visible');
+        }
+      });
+    });
+    document.querySelector('section').classList.add('visible');
+
+    window.addEventListener('scroll', () => {
+  const img = document.querySelector('.animated-image');
+  if (img.getBoundingClientRect().top < window.innerHeight - 100) {
+    img.classList.add('visible');
+  }
+});
+
+    
+  </script>
+
+  
+</body>
+</html>
